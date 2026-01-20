@@ -131,10 +131,18 @@ h1 {
     position: relative;
 }
 
-/* Back Button */
+/* Navigation Top */
+.navigation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .back-button {
     display: inline-block;
-    margin: 30px;
     padding: 12px 30px;
     background: linear-gradient(135deg, #ec4899, #a855f7);
     color: white;
@@ -147,6 +155,71 @@ h1 {
 .back-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(236, 72, 153, 0.6);
+}
+
+.year-navigation {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-year-btn {
+    padding: 10px 25px;
+    background: rgba(30, 10, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    color: #f9a8d4;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-size: 0.95em;
+}
+
+.nav-year-btn:hover {
+    background: rgba(236, 72, 153, 0.2);
+    border-color: rgba(236, 72, 153, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+}
+
+/* Navigation Bottom */
+.year-navigation-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.nav-year-btn-large {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 40px;
+    background: rgba(30, 10, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(236, 72, 153, 0.3);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    min-width: 200px;
+}
+
+.nav-year-btn-large:hover {
+    transform: translateY(-5px);
+    border-color: rgba(236, 72, 153, 0.6);
+    box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+}
+
+.nav-label {
+    color: #d8b4fe;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.nav-year {
+    color: #f9a8d4;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 /* Timeline for Year Pages */
@@ -290,6 +363,24 @@ footer {
     .years-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .navigation-top {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+
+    .year-navigation {
+        justify-content: center;
+    }
+
+    .year-navigation-bottom {
+        flex-direction: column;
+    }
+
+    .nav-year-btn-large {
+        width: 100%;
     }
 
     .timeline::before {
